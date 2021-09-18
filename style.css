@@ -33,7 +33,7 @@
     overflow: hidden;
 } */
 .box-main{
-    height:400px;
+    height:AUTO;
     animation: 1s ease-out 0s 1 slideInFromTop;
 }
 ::-webkit-scrollbar{
@@ -83,10 +83,11 @@ from {bottom: -500px;}
 }
 .pop{
     text-align: center;
-    padding-top: 70px;
+    margin-top: 50px;
 }
 .pop:hover{
     background-color: #fff;
+    
 }
 
 

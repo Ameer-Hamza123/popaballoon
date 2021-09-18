@@ -93,75 +93,27 @@ const startgame = () => {
     
 }
 
-let test = document.querySelector("height");
+let test = document.querySelector(".main-balls");
     
-test.addEventListener("mouseover", function( event ) {   
-    // let num = Math.random()* 4;
-    // console.log(Math.floor(num))
-    // console.log(1)  
-    let val = "abc";
-    event.target.className = `col-2 pop ${val}`;
-    let text = document.createTextNode("POP!");
-    let text1 = document.getElementsByClassName('height');
-    text.appendChild(text1)
-        // for (var i = 0; i < 4 ; i++) {
-        //     console.log(val)
-        //     if (i = 0 ){
-        //         console.log(i)
-        //        val = "red";
-        //        break;
-        //     }else if (i = 1) {
-        //         console.log(i)
-        //         val = "blue";
-        //        break;
-        //     }else if (i = 2){
-        //         console.log(i)
-        //          val = "yellow";
-        //        break;
-        //     }else if (i = 3){
-        //         console.log(i)
-        //          val = "gray";
-        //        break;
-        //     }
-        // }
-        
-  // highlight the mouseenter target
-  // reset the color after a short delay
-  setTimeout(function() {
-    event.target.style.color = "";
-  }, 500);
-}, false);
+test.addEventListener("mouseover", function( event ) {  
+        let val = "abc";
+        let score;
+        setTimeout(function() {
+        if (event.target.className === "col-2 pop blue height"){
+             score += 10;
+             console.log(score)
+            }else {
+                location.reload();
+            }
+            if (event.target.className === "col-2 pop blue height" ){
+            event.target.className = `col-2 pop ${val}`;
+            }else if (event.target.className === "col-2 pop yellow height") {
+                event.target.className = `col-2 pop ${val}`;
+            }else if (event.target.className === "col-2 pop red height") {
+                event.target.className = `col-2 pop ${val}`;
+            }else if (event.target.className === "col-2 pop gray height") {
+                event.target.className = `col-2 pop ${val}`;
+            }
 
-// const lev1 = (event) => {
-//     event.target.className = "red";
-//     let num = Math.random()* 4;
-    
-//     for (var i = 0; i < 4 ; i++) {
-//         if (i = 0 ){
-//           return i = "red";
-//         }else if (i = 1) {
-//            return i = "blue"
-//         }else if (i = 2){
-//             return i = "yellow"
-//         }else if (i = 3){
-//             return i = "gray"
-//         }
-//     }
-//     console.log(Math.floor(num))
-//     console.log(1)
-// }
-// const outblue = () => {
-//     document.getElementById('round-blue').className = "col-2 offset-1 pop round-yellow";
-// }
-// const outblue1 = () => {
-//     document.getElementById('round-blue1').className = "col-2 pop round-yellow";
-// }
-// const outblue2 = () => {
-//     document.getElementById('round-blue2').className = "col-2 pop round-yellow";
-// }
-// const outblue3 = () => {
-//     document.getElementById('round-blue3').className = "col-2 pop round-yellow";
-// }
-// const outblue4 = () => {
-//     document.getElementById('round-blue4').className = "col-2 pop round-yellow";
-// }
+  }, 2000);
+}, false);
